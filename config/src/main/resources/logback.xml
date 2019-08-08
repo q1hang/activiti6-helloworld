@@ -27,7 +27,7 @@
         </encoder>
     </appender>
     <logger name="root" >
-        <level value="ERROR"/>
+        <level value="DEBUG"/>
     </logger>
 
     <!--此处的name记得改成自己的 -->

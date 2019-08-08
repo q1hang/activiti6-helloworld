@@ -8,10 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import q1hang.DemoMain;
 
-@Slf4j
+
 public class ConfigTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoMain.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConfigTest.class);
     @Test
     public void testConfig1(){
         ProcessEngineConfiguration configuration = ProcessEngineConfiguration

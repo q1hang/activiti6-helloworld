@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DemoMain2 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoMain.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DemoMain2.class);
 
     public static void main(String[] args) throws ParseException {
         LOGGER.info("启动我们的流程");

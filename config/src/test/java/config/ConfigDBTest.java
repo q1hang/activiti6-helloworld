@@ -9,7 +9,9 @@ import org.slf4j.LoggerFactory;
 import q1hang.DemoMain;
 
 public class ConfigDBTest {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoMain.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConfigDBTest.class);
+
+
     @Test
     public void testConfig1(){
         ProcessEngineConfiguration configuration = ProcessEngineConfiguration
