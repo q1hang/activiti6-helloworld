@@ -16,7 +16,6 @@
     </bean>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-
         <property name="url" value="jdbc:mysql://localhost:3306/activiti6unit?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" />
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="username" value="root" />
