@@ -116,4 +116,36 @@ public class RuntimeServiceTest {
 
         LOGGER.info("execution = {}",execution);
     }
+
+    @Test
+    @org.activiti.engine.test.Deployment(resources = {"my-process-message-received.bpmn20.xml"})
+    public void testMessageEventReceived(){
+        RuntimeService runtimeService = activitiRule.getRuntimeService();
+        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("my-process-message-received");
+
+        Execution execution = runtimeService.createExecutionQuery()
+                .messageEventSubscriptionName("my-message").singleResult();
+
+        LOGGER.info("execution = {}",execution);
+
+        runtimeService.messageEventReceived("my-message",execution.getId());
+
+        execution = runtimeService.createExecutionQuery()
+                .messageEventSubscriptionName("my-message").singleResult();
+
+        LOGGER.info("execution = {}",execution);
+    }
+
+    @Test
+    @org.activiti.engine.test.Deployment(resources = {"my-process-message.bpmn20.xml"})
+    public void testMessageStart(){
+        RuntimeService runtimeService = activitiRule.getRuntimeService();
+        ProcessInstance processInstance = runtimeService
+//                .startProcessInstanceByKey("my-process-message");
+        .startProcessInstanceByMessage("my-message");
+
+        LOGGER.info("processInstacne = {}",processInstance);
+
+
+    }
 }
